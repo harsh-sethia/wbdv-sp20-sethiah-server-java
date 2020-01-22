@@ -17,28 +17,48 @@
 </head>
 
 <body>
-
+<h1 id="wbdv-main-heading">Northeastern University </h1>
+<h1 id="wbdv-sub-heading">Whiteboard</h1>
 
 
 <div class = "container-fluid">
-    <h1 id="wbdv-main-heading">Northeastern University </h1>
-    <h1 id="wbdv-sub-heading">Whiteboard</h1>
-
 
     <div class="row">
         <div class ="col-4">
-            <h3 id = "wbdv-module-list" class="wbdv-course-title wbdv-module-list">CS 4550 -
+            <h3 id = "wbdv-module-list"
+                class="wbdv-course-title wbdv-module-list"><button
+                    type="button" class="btn btn-dark wbdv-course-editor wbdv-close"><i
+                    class="fa fa-times"></i></button> CS 4550 -
                 Module List</h3>
 
-            <ul class="list-group">
-                <li class="list-group-item">Module 1 -jQuery </li>
-                <li class="list-group-item">Module 2 - React</li>
-                <li class="list-group-item">Module 3 - Redux</li>
-                <li class="list-group-item">Module 4 - Native</li>
-                <li class="list-group-item">Module 5 - Angular</li>
-                <li class="list-group-item">Module 6 - Node</li>
-                <li class="list-group-item">Module 7 - Mongo</li>
+            <ul class="list-group wbdv-module-list">
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title">Module 1
+                    -jQuery <button
+                        type="button"
+                                                                     class="btn btn-dark bt-sm wbdv-module-item-delete-btn"><i class="fa fa-times"></i></button> </li>
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title">Module 2 - React<button
+                        type="button"
+                                                                    class="btn btn-dark bt-sm wbdv-module-item-delete-btn"><i class="fa fa-times"></i></button> </li></li>
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title">Module 3 - Redux<button
+                        type="button"
+                                                                    class="btn btn-dark bt-sm wbdv-module-item-delete-btn"><i class="fa fa-times"></i></button> </li></li>
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title">Module 4 - Native<button
+                        type="button"
+                                                                     class="btn btn-dark bt-sm wbdv-module-item-delete-btn"><i class="fa fa-times"></i></button> </li></li>
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title">Module 5 - Angular<button
+                        type="button"
+                                                                      class="btn btn-dark bt-sm wbdv-module-item-delete-btn"><i class="fa fa-times"></i></button> </li></li>
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title">Module 6 - Node<button
+                        type="button"
+                                                                   class="btn btn-dark bt-sm wbdv-module-item-delete-btn"><i class="fa fa-times"></i></button> </li></li>
+                <li class="list-group-item wbdv-module-item wbdv-module-item-title">Module 7 - Mongo<button
+                        type="button"
+                                                                    class="btn btn-dark bt-sm wbdv-module-item-delete-btn"><i class="fa fa-times"></i></button> </li></li>
             </ul>
+
+            <button type="button"
+                    class="btn btn-dark wbdv-button wbdv-module-item-add-btn"><i
+                    class="fa fa-plus"></i></button>
         </div>
 
 
@@ -81,29 +101,96 @@
                     </a>
                 </li>
 
+                <button type="button" class="btn btn-danger wbdv-button wbdv-new-page-btn"><i
+                        class="fa fa-plus"></i></button>
 
             </ul>
 
 
-            <ul class="nav nav-pills">
-                <li class="nav-item">
+            <ul class="nav nav-pills wbdv-topic-pill-list">
+                <li class="nav-item wbdv-topic-pill">
                     <a class="nav-link" href="#">
                         Topic 1
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item wbdv-topic-pill">
                     <a class=" active nav-link" href="#">
                         Topic 2
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item wbdv-topic-pill">
                     <a class="nav-link" href="#">
                         Topic 3
                     </a>
                 </li>
+                <button type="button"
+                        class="btn btn-primary wbdv-button wbdv-topic-add-btn"><i
+                        class="fa fa-plus"></i></button>
             </ul>
 
-            <i class="fa fa-plus"></i>
+            <div class = "container shift-right">
+                <button type="button" class="btn btn-success">Save</button>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class = "col-7">
+                            <h4>
+                                Heading Widget
+                            </h4>
+                        </div>
+                        <div class ="col-5">
+                            <div class="wbdv-dropdown">
+                                <select class = "wbdv-field">
+                                    <option selected>
+                                        Heading
+                                    </option>
+                                </select>
+
+                                <button type="button" class="btn btn-warning"><i
+                                        class="fa fa-arrow-up"></i></button>
+
+                                <button type="button" class="btn btn-warning"><i
+                                        class="fa fa-arrow-down"></i></button>
+
+                                <button type="button" class="btn btn-danger"><i
+                                        class="fa fa-times"></i></button>
+                            </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                <div class="container">
+                 <br>
+                    <input class="form-control wbdv-field wbdv-new-course"
+                        placeholder = "Heading Text"/> <br>
+                    <div class="wbdv-dropdown">
+                    <select class = "wbdv-field btn-block">
+                        <option selected>
+                            Heading 1
+                        </option>
+                    </select>
+                    </div>
+                    <br>
+                    <input class="form-control wbdv-field wbdv-new-course"
+                        placeholder = "Widget Name"/>
+
+                    <br> <h5> Preview</h5>
+                    <h4>Heading Text</h4>
+                </div>
+
+                </div>
+            <button type="button"
+                    class="btn btn-danger wbdv-button wbdv-add-course">o
+            </button>
+            </div>
 
         </div>
     </div>

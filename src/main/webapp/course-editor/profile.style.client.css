@@ -2,23 +2,27 @@ body {
 background-color: #F8F8F8;
 }
 
-#wbdv-main-heading {
+ #wbdv-main-heading {
     margin:0;
     color:white;
     background-color: #000000;
-    font-size: 10px;
+    font-size: 28px;
     font-family: Times;
-    padding-left: 10px;
+    padding-left: 20px;
                      }
 
   #wbdv-sub-heading {
      color:white;
      background-color: #000000;
-     font-size: 10px;
+     font-size: 28px;
      margin: 0;
-     padding-left: 10px;
+     padding-left: 20px;
                       }
 
                       .wbdv-field {
                         margin: 5px 0 10px 0;
+                        }
+
+                        .wbdv-message {
+                        margin-top: 10px;
                         }
