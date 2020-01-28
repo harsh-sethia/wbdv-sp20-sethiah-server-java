@@ -1,5 +1,4 @@
 
-
 (function() {
     let userService = new AdminUserServiceClient()
 

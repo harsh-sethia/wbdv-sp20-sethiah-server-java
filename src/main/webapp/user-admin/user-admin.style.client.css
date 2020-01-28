@@ -1,0 +1,25 @@
+body {
+background-color: #F8F8F8;
+}
+
+
+ #wbdv-main-heading {
+     margin:0;
+     color:white;
+     background-color: #000000;
+     font-size: 28px;
+     font-family: Times;
+     padding-left: 20px;
+                      }
+
+   #wbdv-sub-heading {
+      color:white;
+      background-color: #000000;
+      font-size: 28px;
+      margin: 0;
+      padding-left: 20px;
+                       }
+
+   .btn-light{
+   padding: 0px;
+   }
