@@ -12,6 +12,7 @@
     let $updateBtn
     let $adminTable
     let $roleFld
+    let $tableBody
 
     let users = []
 
@@ -82,7 +83,7 @@
     }
 
     function renderUsers() {
-        $userList.empty()
+        $tableBody.empty()
         for(let u in users) {
             let user = users[u]
 
@@ -118,7 +119,7 @@
 
             $col1 = $td.html(user.username)
             $td = $(`<td>`)
-            $col2 = $td.html(user.password)
+            $col2 = $td.html(`&nbsp;`)
             $td = $(`<td>`)
             $col3 = $td.html(user.firstName)
             $td = $(`<td>`)
@@ -185,6 +186,7 @@
         $firstNameFld = $("#firstNameFld")
         $lastNameFld = $("#lastNameFld")
         $roleFld = $("#roleFld")
+        $tableBody = $(".wbdv-tbody")
 
         $createBtn = $(".wbdv-create")
         $createBtn.click(createUser)
