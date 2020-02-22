@@ -2,73 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Profile</title>
+    <title>Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet"/>
 
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link href="profile.style.client.css"
-          rel ="stylesheet"/>
 </head>
 <body>
-<h1 id="wbdv-main-heading">Northeastern University </h1>
-<h1 id="wbdv-sub-heading">Whiteboard</h1>
-
-<div class=" container alert alert-success wbdv-message " role="alert">
-    Record Updated Successfully!
-</div>
-
-<div class = "container">
-    <h2 id="wbdv-profile-heading">Profile</h2>
-
-    Username: <input class="form-control wbdv-field wbdv-username" value =
-        "sethiah21" disabled = "true"/>
-</div>
-
 <div class="container">
-    Password: <input type ="password"
-                     class="form-control wbdv-field wbdv-password"/>
-</div>
-
-<div class="container">
-    Phone: <input type ="number"
-                     class="form-control wbdv-field wbdv-phone"/>
-</div>
-
-<div class="container">
-    Email: <input type ="email"
-                  class="form-control wbdv-field wbdv-email"/>
-</div>
-
-<div class="container">
-    Date of Birth: <input type ="date"
-                  class="form-control wbdv-field wbdv-date"/>
-</div>
-
-<div class="container wbdv-dropdown">
-    Role: <br>
-    <select class = "wbdv-field wbdv-role btn-block" disabled = "true">
-    <option>
-        Faculty
-    </option>
-
-    <option selected>
-        Student
-    </option>
-</select>
-</div>
-
-<div class="container">
-    <a href = "../index.html" role = "button">
-        <button type="button"
-                class="btn btn-danger wbdv-button wbdv-logout"
-        >Logout</button>
-    </a>
+    <h1>Profile</h1>
+    <div class="row">
+        <div class="col-4">
+            Username
+        </div>
+        <div class="col-8">
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">Password</div>
+        <div class="col-8"><input class="form-control"/></div>
+    </div>
 
 
-        <button type="button"
-                class="btn btn-danger wbdv-button wbdv-update"
-        >Update</button>
+    DOB
+    <input/><br/>
+    Role<br/>
+    <label>
+    <input type="checkbox"/>
+    Tenured?</label>
+
+    <br/>
+    <label for="yrlsalary">Salary</label>
+    <input id="yrlsalary"
+           min="10000"
+           max="1000000"
+           type="number"
+           placeholder="100000"
+           title="Please provide your yearly salary"/><br/>
+    Email
+    <input placeholder="alice@wonderland.com" value="john@doe.com"/><br/>
+    Phone
+    <input/>
 </div>
 </body>
 </html>
