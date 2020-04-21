@@ -2,61 +2,53 @@ package com.example.wbdvsp20sethiahserverjava.controllers;
 
 import com.example.wbdvsp20sethiahserverjava.models.Widget;
 import com.example.wbdvsp20sethiahserverjava.services.WidgetService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
 public class WidgetController {
 
-    WidgetService service = new WidgetService();
+    @Autowired
+    WidgetService service;
 
-    @PostMapping("/widgets")
-    public Widget createWidget(
+    @PostMapping("/api/topics/{tid}/widgets")
+    public Widget createWidget(@PathVariable("tid") int topicId,
             @RequestBody Widget newWidget) {
-        return service.createWidget(newWidget);
+        return service.createWidget(topicId,newWidget);
     }
 
-    @DeleteMapping("/widgets/{widgetId}")
+
+    @GetMapping("/api/topics/{tid}/widgets")
+    public List<Widget> findWidgetForTopic(
+            @PathVariable("tid") Integer topicId) {
+        return service.findWidgetsForTopic(topicId);
+    }
+
+    @DeleteMapping("/api/widgets/{widgetId}")
     public int deleteWidget(
-            @PathVariable("widgetId") String wid) {
+            @PathVariable("widgetId") Integer wid) {
         return service.deleteWidget(wid);
     }
 
-    @PutMapping("/widgets/{widgetId}")
+    @PutMapping("/api/widgets/{widgetId}")
     public int updateWidget(
-            @PathVariable("widgetId") String wid,
+            @PathVariable("widgetId") Integer wid,
             @RequestBody Widget updatedWidget) {
         return service.updateWidget(wid, updatedWidget);
     }
 
-    @GetMapping("/widgets/{widgetId}")
+    @GetMapping("/api/widgets/{widgetId}")
     public Widget findWidgetById(
-            @PathVariable("widgetId") String wid) {
+            @PathVariable("widgetId") Integer wid) {
         return service.findWidgetById(wid);
     }
 
-    @GetMapping("/widgets")
+    @GetMapping("/api/widgets")
     public List<Widget> findAllWidgets() {
         return service.findAllWidgets();
     }
 
-    @GetMapping("/topics/{tid}/widgets")
-    public List<Widget> findWidgetsForTopic(
-            @PathVariable("tid") String topicId) {
-        return service.findWidgetsForTopic(topicId);
-    }
-
-    @GetMapping("/w1")
-    public Widget getWidget() {
-        Widget w1 = new Widget("123", "Widget A", "PARAGRAPH");
-        return w1;
-    }
-
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello World";
-    }
 }
